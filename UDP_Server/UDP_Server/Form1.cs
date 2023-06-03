@@ -21,11 +21,13 @@ namespace UDP_Server
         private UdpClient server;
         Socket socket;
         byte[] buffer = new byte[1024];
-        EndPoint endpoint = new IPEndPoint(IPAddress.Any, 0);
+        
 
         public Form1()
         {
             InitializeComponent();
+            server =  new UdpClient(8000);
+            Task.Run(() => Receive());
             CheckForIllegalCrossThreadCalls = false;
         }
 
@@ -37,20 +39,15 @@ namespace UDP_Server
         private void btTao_Click(object sender, EventArgs e)
         {
             IPAddress ip;
-            if (!IPAddress.TryParse(tbIP.Text, out ip))
+            if (!IPAddress.TryParse(tbIPServer.Text, out ip))
                 MessageBox.Show("Hãy nhập một IP chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                if (Int32.Parse(tbPort.Text) < 1024 || Int32.Parse(tbPort.Text) > 65535)
+                if (Int32.Parse(tbPortClient.Text) < 1024 || Int32.Parse(tbPortClient.Text) > 65535)
                     MessageBox.Show("Hãy chọn một Port trong khoảng (1024-65535)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-                    IPEndPoint IPendpoint = new IPEndPoint(IPAddress.Parse(tbIP.Text), Int32.Parse(tbPort.Text));
-                    socket.Bind(IPendpoint);
-                    Thread listen = new Thread(Receive);
-                    listen.IsBackground = true;
-                    listen.Start();
+                    
                     MessageBox.Show("Tạo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -60,13 +57,18 @@ namespace UDP_Server
         {
             while (true)
             {
-                int received_length = socket.ReceiveFrom(buffer, 0, 1024, SocketFlags.None, ref endpoint);
-                string received_data = Encoding.UTF8.GetString(buffer, 0, received_length);
-
-                rtbMessage.Text += "Client: " + received_data + "\n";
-
+                IPEndPoint clientEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                byte[] receivedData = server.Receive(ref clientEndPoint);
+                string received_data = Encoding.ASCII.GetString(receivedData);
+              
                 string keyWordOpenFile = "OPEN#";
+
                 string keyWordDich = "DICH#";
+
+                if (received_data.StartsWith(keyWordDich))
+                    rtbMessage.Text += "Client: " + received_data.Substring(keyWordDich.Length) + "\n";
+                else
+                    rtbMessage.Text += "Client: " + received_data + "\n";
 
                 if (received_data.StartsWith(keyWordOpenFile))
                 {
@@ -112,7 +114,7 @@ namespace UDP_Server
                 else if (received_data.StartsWith(keyWordDich))
                 {
                     string word = received_data.Substring(keyWordDich.Length);
-                    string wordTranslate = "";
+                    string wordTranslate;
 
                     if (word == "Computer")
                         wordTranslate = "Máy tính";
@@ -123,7 +125,9 @@ namespace UDP_Server
                     else
                         wordTranslate = "Not found";
 
-
+                    byte[] data = Encoding.UTF8.GetBytes(wordTranslate);
+                    IPAddress clientIP = IPAddress.Parse(tbIPClient.Text);
+                    server.Send(data,data.Length,new IPEndPoint(clientIP,Int32.Parse(tbPortClient.Text)));
                 }
                                                                                     
             }

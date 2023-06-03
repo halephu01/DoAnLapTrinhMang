@@ -28,86 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbPort = new System.Windows.Forms.TextBox();
-            this.tbIP = new System.Windows.Forms.TextBox();
-            this.btTao = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.rtbMessage = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbPath = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btTao = new System.Windows.Forms.Button();
+            this.tbIPServer = new System.Windows.Forms.TextBox();
+            this.tbPortClient = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.tbIPClient = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbPortServer = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.tbPort);
-            this.groupBox1.Controls.Add(this.tbIP);
-            this.groupBox1.Controls.Add(this.btTao);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(40, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(296, 301);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tạo thông tin cho máy chủ";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // tbPort
-            // 
-            this.tbPort.Location = new System.Drawing.Point(111, 75);
-            this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(100, 20);
-            this.tbPort.TabIndex = 4;
-            this.tbPort.Text = "8000";
-            // 
-            // tbIP
-            // 
-            this.tbIP.Location = new System.Drawing.Point(108, 25);
-            this.tbIP.Name = "tbIP";
-            this.tbIP.Size = new System.Drawing.Size(124, 20);
-            this.tbIP.TabIndex = 3;
-            this.tbIP.Text = "127.0.0.1";
-            // 
-            // btTao
-            // 
-            this.btTao.Location = new System.Drawing.Point(111, 254);
-            this.btTao.Name = "btTao";
-            this.btTao.Size = new System.Drawing.Size(75, 23);
-            this.btTao.TabIndex = 2;
-            this.btTao.Text = "Tạo";
-            this.btTao.UseVisualStyleBackColor = true;
-            this.btTao.Click += new System.EventHandler(this.btTao_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Port client: ";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "IP server: ";
             // 
             // rtbMessage
             // 
@@ -143,39 +80,102 @@
             this.tbPath.Size = new System.Drawing.Size(414, 20);
             this.tbPath.TabIndex = 4;
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 14;
-            this.textBox1.Text = "127.0.0.1";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "IP server: ";
             // 
-            // textBox2
+            // label2
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 13;
-            this.textBox2.Text = "8000";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 113);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Port client: ";
             // 
-            // label4
+            // btTao
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 164);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Port client:";
+            this.btTao.Location = new System.Drawing.Point(91, 164);
+            this.btTao.Name = "btTao";
+            this.btTao.Size = new System.Drawing.Size(75, 23);
+            this.btTao.TabIndex = 2;
+            this.btTao.Text = "Tạo";
+            this.btTao.UseVisualStyleBackColor = true;
+            this.btTao.Click += new System.EventHandler(this.btTao_Click);
+            // 
+            // tbIPServer
+            // 
+            this.tbIPServer.Location = new System.Drawing.Point(108, 25);
+            this.tbIPServer.Name = "tbIPServer";
+            this.tbIPServer.Size = new System.Drawing.Size(124, 20);
+            this.tbIPServer.TabIndex = 3;
+            this.tbIPServer.Text = "127.0.0.1";
+            // 
+            // tbPortClient
+            // 
+            this.tbPortClient.Location = new System.Drawing.Point(111, 113);
+            this.tbPortClient.Name = "tbPortClient";
+            this.tbPortClient.Size = new System.Drawing.Size(100, 20);
+            this.tbPortClient.TabIndex = 4;
+            this.tbPortClient.Text = "8080";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 135);
+            this.label5.Location = new System.Drawing.Point(19, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "IP client: ";
+            // 
+            // tbIPClient
+            // 
+            this.tbIPClient.Location = new System.Drawing.Point(108, 81);
+            this.tbIPClient.Name = "tbIPClient";
+            this.tbIPClient.Size = new System.Drawing.Size(119, 20);
+            this.tbIPClient.TabIndex = 14;
+            this.tbIPClient.Text = "127.0.0.1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbPortServer);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.tbIPClient);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.tbPortClient);
+            this.groupBox1.Controls.Add(this.tbIPServer);
+            this.groupBox1.Controls.Add(this.btTao);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(40, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(296, 204);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Tạo thông tin cho máy chủ";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // tbPortServer
+            // 
+            this.tbPortServer.Location = new System.Drawing.Point(106, 60);
+            this.tbPortServer.Name = "tbPortServer";
+            this.tbPortServer.Size = new System.Drawing.Size(100, 20);
+            this.tbPortServer.TabIndex = 16;
+            this.tbPortServer.Text = "8000";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Port server: ";
             // 
             // Form1
             // 
@@ -188,30 +188,29 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbPort;
-        private System.Windows.Forms.TextBox tbIP;
-        private System.Windows.Forms.Button btTao;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbMessage;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox tbPath;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btTao;
+        private System.Windows.Forms.TextBox tbIPServer;
+        private System.Windows.Forms.TextBox tbPortClient;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbIPClient;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbPortServer;
+        private System.Windows.Forms.Label label4;
     }
 }
 

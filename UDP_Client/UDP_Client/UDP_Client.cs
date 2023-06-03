@@ -14,7 +14,7 @@ namespace UDP_Client
 {
     public partial class UDP_Client : Form
     {
-
+        private UdpClient client;
         Socket socket;
         IPEndPoint endpoint;
         byte[] buffer = new byte[1024];
@@ -22,6 +22,20 @@ namespace UDP_Client
         public UDP_Client()
         {
             InitializeComponent();
+            client = new UdpClient(8080);
+            Task.Run(() => ReceiveData());
+            CheckForIllegalCrossThreadCalls = false;
+        }
+
+        private void ReceiveData()
+        {
+            while (true)
+            {
+                IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Any, 0);
+                byte[] receivedData = client.Receive(ref serverEndPoint);
+                string receivedMessage = Encoding.UTF8.GetString(receivedData);
+                rtbMessage.Text += "Server: " + receivedMessage + "\n";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,7 +90,7 @@ namespace UDP_Client
                 socket.SendTo(data, endpoint);
                 rtbMessage.Text += "Client: " + tbTuTiengAnh.Text + "\n";
 
-                tbMessage.Text = String.Empty;
+                tbTuTiengAnh.Text = String.Empty;
             }
         }
 
