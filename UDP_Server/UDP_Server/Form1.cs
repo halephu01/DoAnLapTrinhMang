@@ -128,8 +128,15 @@ namespace UDP_Server
                     byte[] data = Encoding.UTF8.GetBytes(wordTranslate);
                     IPAddress clientIP = IPAddress.Parse(tbIPClient.Text);
                     server.Send(data,data.Length,new IPEndPoint(clientIP,Int32.Parse(tbPortClient.Text)));
+                }     
+                
+                else if (File.Exists(received_data))
+                {
+                    string content = File.ReadAllText(received_data);
+
+                    byte[] data = Encoding.UTF8.GetBytes(content);
+                    server.Send(data, data.Length, new IPEndPoint(IPAddress.Parse(tbIPClient.Text), Int32.Parse(tbPortClient.Text)));
                 }
-                                                                                    
             }
         }
     }
