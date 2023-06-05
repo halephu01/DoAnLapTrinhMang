@@ -10,24 +10,22 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 
-namespace UDP_Client
+namespace MenuDoAn
 {
-    public partial class UDP_Client : Form
+    public partial class BaiTongHop : Form
     {
         private UdpClient client;
         Socket socket;
         IPEndPoint endpoint;
-        byte[] buffer = new byte[1024];
 
-        public UDP_Client()
+        public BaiTongHop()
         {
             InitializeComponent();
-            client = new UdpClient(8080);
+            client = new UdpClient(Int32.Parse(tbPortClient.Text));
             Task.Run(() => ReceiveData());
             CheckForIllegalCrossThreadCalls = false;
         }
-
-       void SendData(string sendData)
+        void SendData(string sendData)
         {
             byte[] data = Encoding.UTF8.GetBytes(sendData);
             socket.SendTo(data, endpoint);
@@ -51,48 +49,29 @@ namespace UDP_Client
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btKetNoi_Click(object sender, EventArgs e)
         {
             IPAddress ip;
-            if (!IPAddress.TryParse(tbIPMayChu.Text, out ip))
+            if (!IPAddress.TryParse(tbIPServer.Text, out ip))
                 MessageBox.Show("Hãy nhập một IP chính xác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                if (Int32.Parse(tbPort.Text) < 1024 || Int32.Parse(tbPort.Text) > 65535)
+                if (Int32.Parse(tbPortServer.Text) < 1024 || Int32.Parse(tbPortServer.Text) > 65535)
                     MessageBox.Show("Hãy chọn một Port trong khoảng (1024-65535)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 else
                 {
-                    string IP = tbIPMayChu.Text;
-                    int Port = Int32.Parse(tbPort.Text);
+                    string IP = tbIPServer.Text;
+                    int Port = Int32.Parse(tbPortServer.Text);
                     endpoint = new IPEndPoint(IPAddress.Parse(IP), Port);
 
                     socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
                     MessageBox.Show("Kết nối thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    groupBox2.Enabled = true;
                     rtbMessage.Enabled = true;
                     tbMessage.Enabled = true;
                     btGui.Enabled = true;
+                    groupBox2.Enabled = true;
                 }
-            }
-        }
-
-        private void btGui_Click(object sender, EventArgs e)
-        {
-            if (tbMessage.Text != "")
-            {               
-                SendData(tbMessage.Text);
-                tbMessage.Text = String.Empty;        
             }
         }
 
@@ -105,9 +84,13 @@ namespace UDP_Client
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btGui_Click(object sender, EventArgs e)
         {
-
+            if (tbMessage.Text != "")
+            {
+                SendData(tbMessage.Text);
+                tbMessage.Text = String.Empty;
+            }
         }
     }
 }

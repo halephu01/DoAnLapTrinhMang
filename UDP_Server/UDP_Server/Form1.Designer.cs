@@ -66,6 +66,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.rtbMessage);
+            this.groupBox2.Enabled = false;
             this.groupBox2.Location = new System.Drawing.Point(357, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(414, 327);
@@ -75,6 +76,7 @@
             // 
             // tbPath
             // 
+            this.tbPath.Enabled = false;
             this.tbPath.Location = new System.Drawing.Point(357, 385);
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(414, 20);

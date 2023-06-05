@@ -1,6 +1,6 @@
-﻿namespace UDP_Client
+﻿namespace MenuDoAn
 {
-    partial class UDP_Client
+    partial class BaiTongHop
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.tbMessage = new System.Windows.Forms.TextBox();
+            this.rtbMessage = new System.Windows.Forms.RichTextBox();
+            this.btGui = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbIPClient = new System.Windows.Forms.TextBox();
+            this.tbPortClient = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btKetNoi = new System.Windows.Forms.Button();
-            this.tbIPMayChu = new System.Windows.Forms.TextBox();
-            this.tbPort = new System.Windows.Forms.TextBox();
+            this.tbIPServer = new System.Windows.Forms.TextBox();
+            this.tbPortServer = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btGui = new System.Windows.Forms.Button();
-            this.rtbMessage = new System.Windows.Forms.RichTextBox();
-            this.tbMessage = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbTuTiengAnh = new System.Windows.Forms.TextBox();
@@ -49,40 +49,67 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // tbMessage
+            // 
+            this.tbMessage.Enabled = false;
+            this.tbMessage.Location = new System.Drawing.Point(27, 400);
+            this.tbMessage.Name = "tbMessage";
+            this.tbMessage.Size = new System.Drawing.Size(359, 20);
+            this.tbMessage.TabIndex = 18;
+            // 
+            // rtbMessage
+            // 
+            this.rtbMessage.Enabled = false;
+            this.rtbMessage.Location = new System.Drawing.Point(27, 30);
+            this.rtbMessage.Name = "rtbMessage";
+            this.rtbMessage.Size = new System.Drawing.Size(452, 351);
+            this.rtbMessage.TabIndex = 17;
+            this.rtbMessage.Text = "";
+            // 
+            // btGui
+            // 
+            this.btGui.Enabled = false;
+            this.btGui.Location = new System.Drawing.Point(404, 397);
+            this.btGui.Name = "btGui";
+            this.btGui.Size = new System.Drawing.Size(75, 23);
+            this.btGui.TabIndex = 16;
+            this.btGui.Text = "Gửi";
+            this.btGui.UseVisualStyleBackColor = true;
+            this.btGui.Click += new System.EventHandler(this.btGui_Click);
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.tbIPClient);
+            this.groupBox1.Controls.Add(this.tbPortClient);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btKetNoi);
-            this.groupBox1.Controls.Add(this.tbIPMayChu);
-            this.groupBox1.Controls.Add(this.tbPort);
+            this.groupBox1.Controls.Add(this.tbIPServer);
+            this.groupBox1.Controls.Add(this.tbPortServer);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(488, 25);
+            this.groupBox1.Location = new System.Drawing.Point(503, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(270, 200);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kết nối";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox1
+            // tbIPClient
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "127.0.0.1";
+            this.tbIPClient.Location = new System.Drawing.Point(136, 97);
+            this.tbIPClient.Name = "tbIPClient";
+            this.tbIPClient.Size = new System.Drawing.Size(119, 20);
+            this.tbIPClient.TabIndex = 10;
+            this.tbIPClient.Text = "127.0.0.1";
             // 
-            // textBox2
+            // tbPortClient
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "8080";
+            this.tbPortClient.Location = new System.Drawing.Point(136, 133);
+            this.tbPortClient.Name = "tbPortClient";
+            this.tbPortClient.Size = new System.Drawing.Size(119, 20);
+            this.tbPortClient.TabIndex = 9;
+            this.tbPortClient.Text = "8084";
             // 
             // label4
             // 
@@ -112,21 +139,21 @@
             this.btKetNoi.UseVisualStyleBackColor = true;
             this.btKetNoi.Click += new System.EventHandler(this.btKetNoi_Click);
             // 
-            // tbIPMayChu
+            // tbIPServer
             // 
-            this.tbIPMayChu.Location = new System.Drawing.Point(136, 28);
-            this.tbIPMayChu.Name = "tbIPMayChu";
-            this.tbIPMayChu.Size = new System.Drawing.Size(119, 20);
-            this.tbIPMayChu.TabIndex = 5;
-            this.tbIPMayChu.Text = "127.0.0.1";
+            this.tbIPServer.Location = new System.Drawing.Point(136, 28);
+            this.tbIPServer.Name = "tbIPServer";
+            this.tbIPServer.Size = new System.Drawing.Size(119, 20);
+            this.tbIPServer.TabIndex = 5;
+            this.tbIPServer.Text = "127.0.0.1";
             // 
-            // tbPort
+            // tbPortServer
             // 
-            this.tbPort.Location = new System.Drawing.Point(136, 64);
-            this.tbPort.Name = "tbPort";
-            this.tbPort.Size = new System.Drawing.Size(119, 20);
-            this.tbPort.TabIndex = 4;
-            this.tbPort.Text = "8000";
+            this.tbPortServer.Location = new System.Drawing.Point(136, 64);
+            this.tbPortServer.Name = "tbPortServer";
+            this.tbPortServer.Size = new System.Drawing.Size(119, 20);
+            this.tbPortServer.TabIndex = 4;
+            this.tbPortServer.Text = "8004";
             // 
             // label3
             // 
@@ -145,35 +172,6 @@
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "IP server: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // btGui
-            // 
-            this.btGui.Enabled = false;
-            this.btGui.Location = new System.Drawing.Point(389, 392);
-            this.btGui.Name = "btGui";
-            this.btGui.Size = new System.Drawing.Size(75, 23);
-            this.btGui.TabIndex = 7;
-            this.btGui.Text = "Gửi";
-            this.btGui.UseVisualStyleBackColor = true;
-            this.btGui.Click += new System.EventHandler(this.btGui_Click);
-            // 
-            // rtbMessage
-            // 
-            this.rtbMessage.Enabled = false;
-            this.rtbMessage.Location = new System.Drawing.Point(12, 25);
-            this.rtbMessage.Name = "rtbMessage";
-            this.rtbMessage.Size = new System.Drawing.Size(452, 351);
-            this.rtbMessage.TabIndex = 8;
-            this.rtbMessage.Text = "";
-            // 
-            // tbMessage
-            // 
-            this.tbMessage.Enabled = false;
-            this.tbMessage.Location = new System.Drawing.Point(12, 395);
-            this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(359, 20);
-            this.tbMessage.TabIndex = 9;
             // 
             // groupBox2
             // 
@@ -181,10 +179,10 @@
             this.groupBox2.Controls.Add(this.tbTuTiengAnh);
             this.groupBox2.Controls.Add(this.btDich);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(485, 242);
+            this.groupBox2.Location = new System.Drawing.Point(503, 247);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(273, 134);
-            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Translate";
             // 
@@ -214,19 +212,18 @@
             this.btDich.UseVisualStyleBackColor = true;
             this.btDich.Click += new System.EventHandler(this.btDich_Click);
             // 
-            // UDP_Client
+            // BaiTongHop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.rtbMessage);
             this.Controls.Add(this.btGui);
             this.Controls.Add(this.groupBox1);
-            this.Name = "UDP_Client";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Name = "BaiTongHop";
+            this.Text = "BaiTongHop";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -238,23 +235,22 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox tbMessage;
+        private System.Windows.Forms.RichTextBox rtbMessage;
+        private System.Windows.Forms.Button btGui;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox tbIPClient;
+        private System.Windows.Forms.TextBox tbPortClient;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btKetNoi;
+        private System.Windows.Forms.TextBox tbIPServer;
+        private System.Windows.Forms.TextBox tbPortServer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btKetNoi;
-        private System.Windows.Forms.TextBox tbIPMayChu;
-        private System.Windows.Forms.TextBox tbPort;
-        private System.Windows.Forms.Button btGui;
-        private System.Windows.Forms.RichTextBox rtbMessage;
-        private System.Windows.Forms.TextBox tbMessage;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbTuTiengAnh;
         private System.Windows.Forms.Button btDich;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
     }
 }
-
