@@ -53,9 +53,12 @@
             this.groupBox2.Controls.Add(this.tbTuTiengAnh);
             this.groupBox2.Controls.Add(this.btDich);
             this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(499, 247);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(665, 304);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(273, 134);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(364, 165);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Translate";
@@ -63,35 +66,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 40);
+            this.label1.Location = new System.Drawing.Point(8, 49);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(98, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = " Nhập từ: ";
             // 
             // tbTuTiengAnh
             // 
-            this.tbTuTiengAnh.Location = new System.Drawing.Point(96, 37);
+            this.tbTuTiengAnh.Location = new System.Drawing.Point(128, 46);
+            this.tbTuTiengAnh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTuTiengAnh.Name = "tbTuTiengAnh";
-            this.tbTuTiengAnh.Size = new System.Drawing.Size(136, 20);
+            this.tbTuTiengAnh.Size = new System.Drawing.Size(180, 28);
             this.tbTuTiengAnh.TabIndex = 1;
             // 
             // btDich
             // 
-            this.btDich.Location = new System.Drawing.Point(96, 78);
+            this.btDich.BackColor = System.Drawing.Color.Turquoise;
+            this.btDich.Location = new System.Drawing.Point(128, 96);
+            this.btDich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDich.Name = "btDich";
-            this.btDich.Size = new System.Drawing.Size(75, 23);
+            this.btDich.Size = new System.Drawing.Size(109, 42);
             this.btDich.TabIndex = 0;
             this.btDich.Text = "Dịch";
-            this.btDich.UseVisualStyleBackColor = true;
+            this.btDich.UseVisualStyleBackColor = false;
             this.btDich.Click += new System.EventHandler(this.btDich_Click);
             // 
             // rtbMessage
             // 
             this.rtbMessage.Enabled = false;
-            this.rtbMessage.Location = new System.Drawing.Point(26, 30);
+            this.rtbMessage.Location = new System.Drawing.Point(35, 37);
+            this.rtbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rtbMessage.Name = "rtbMessage";
-            this.rtbMessage.Size = new System.Drawing.Size(452, 351);
+            this.rtbMessage.Size = new System.Drawing.Size(601, 431);
             this.rtbMessage.TabIndex = 15;
             this.rtbMessage.Text = "";
             // 
@@ -106,99 +114,113 @@
             this.groupBox1.Controls.Add(this.tbPortServer);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(502, 30);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(669, 37);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 200);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(360, 246);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kết nối";
             // 
             // tbIPClient
             // 
-            this.tbIPClient.Location = new System.Drawing.Point(136, 97);
+            this.tbIPClient.Location = new System.Drawing.Point(181, 119);
+            this.tbIPClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbIPClient.Name = "tbIPClient";
-            this.tbIPClient.Size = new System.Drawing.Size(119, 20);
+            this.tbIPClient.Size = new System.Drawing.Size(157, 28);
             this.tbIPClient.TabIndex = 10;
             this.tbIPClient.Text = "127.0.0.1";
             // 
             // tbPortClient
             // 
-            this.tbPortClient.Location = new System.Drawing.Point(136, 133);
+            this.tbPortClient.Location = new System.Drawing.Point(181, 164);
+            this.tbPortClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPortClient.Name = "tbPortClient";
-            this.tbPortClient.Size = new System.Drawing.Size(119, 20);
+            this.tbPortClient.Size = new System.Drawing.Size(157, 28);
             this.tbPortClient.TabIndex = 9;
             this.tbPortClient.Text = "8081";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 133);
+            this.label4.Location = new System.Drawing.Point(31, 170);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(107, 22);
             this.label4.TabIndex = 8;
             this.label4.Text = "Port client:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(23, 104);
+            this.label5.Location = new System.Drawing.Point(31, 125);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(94, 22);
             this.label5.TabIndex = 7;
             this.label5.Text = "IP client: ";
             // 
             // btKetNoi
             // 
-            this.btKetNoi.Location = new System.Drawing.Point(93, 159);
+            this.btKetNoi.BackColor = System.Drawing.Color.Turquoise;
+            this.btKetNoi.Location = new System.Drawing.Point(107, 196);
+            this.btKetNoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btKetNoi.Name = "btKetNoi";
-            this.btKetNoi.Size = new System.Drawing.Size(75, 23);
+            this.btKetNoi.Size = new System.Drawing.Size(115, 42);
             this.btKetNoi.TabIndex = 6;
             this.btKetNoi.Text = "Kết nối";
-            this.btKetNoi.UseVisualStyleBackColor = true;
+            this.btKetNoi.UseVisualStyleBackColor = false;
             this.btKetNoi.Click += new System.EventHandler(this.btKetNoi_Click);
             // 
             // tbIPServer
             // 
-            this.tbIPServer.Location = new System.Drawing.Point(136, 28);
+            this.tbIPServer.Location = new System.Drawing.Point(181, 34);
+            this.tbIPServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbIPServer.Name = "tbIPServer";
-            this.tbIPServer.Size = new System.Drawing.Size(119, 20);
+            this.tbIPServer.Size = new System.Drawing.Size(157, 28);
             this.tbIPServer.TabIndex = 5;
             this.tbIPServer.Text = "127.0.0.1";
             // 
             // tbPortServer
             // 
-            this.tbPortServer.Location = new System.Drawing.Point(136, 64);
+            this.tbPortServer.Location = new System.Drawing.Point(181, 79);
+            this.tbPortServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPortServer.Name = "tbPortServer";
-            this.tbPortServer.Size = new System.Drawing.Size(119, 20);
+            this.tbPortServer.Size = new System.Drawing.Size(157, 28);
             this.tbPortServer.TabIndex = 4;
             this.tbPortServer.Text = "8001";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 64);
+            this.label3.Location = new System.Drawing.Point(31, 85);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(115, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Port server:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 35);
+            this.label2.Location = new System.Drawing.Point(31, 40);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.Size = new System.Drawing.Size(102, 22);
             this.label2.TabIndex = 1;
             this.label2.Text = "IP server: ";
             // 
             // Client
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.rtbMessage);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Client";
             this.Text = "Client";
             this.groupBox2.ResumeLayout(false);
