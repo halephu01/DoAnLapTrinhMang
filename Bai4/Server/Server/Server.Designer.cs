@@ -40,6 +40,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rtbMessage = new System.Windows.Forms.RichTextBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -57,9 +58,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(395, 300);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
@@ -68,7 +69,7 @@
             // tbPortServer
             // 
             this.tbPortServer.Location = new System.Drawing.Point(166, 98);
-            this.tbPortServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPortServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortServer.Name = "tbPortServer";
             this.tbPortServer.Size = new System.Drawing.Size(157, 30);
             this.tbPortServer.TabIndex = 16;
@@ -87,7 +88,7 @@
             // tbIPClient
             // 
             this.tbIPClient.Location = new System.Drawing.Point(166, 146);
-            this.tbIPClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIPClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPClient.Name = "tbIPClient";
             this.tbIPClient.Size = new System.Drawing.Size(157, 30);
             this.tbIPClient.TabIndex = 14;
@@ -106,7 +107,7 @@
             // tbPortClient
             // 
             this.tbPortClient.Location = new System.Drawing.Point(166, 189);
-            this.tbPortClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPortClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortClient.Name = "tbPortClient";
             this.tbPortClient.Size = new System.Drawing.Size(157, 30);
             this.tbPortClient.TabIndex = 4;
@@ -115,7 +116,7 @@
             // tbIPServer
             // 
             this.tbIPServer.Location = new System.Drawing.Point(166, 56);
-            this.tbIPServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIPServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPServer.Name = "tbIPServer";
             this.tbIPServer.Size = new System.Drawing.Size(157, 30);
             this.tbIPServer.TabIndex = 3;
@@ -125,7 +126,7 @@
             // 
             this.btTao.BackColor = System.Drawing.Color.Turquoise;
             this.btTao.Location = new System.Drawing.Point(166, 236);
-            this.btTao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTao.Margin = new System.Windows.Forms.Padding(4);
             this.btTao.Name = "btTao";
             this.btTao.Size = new System.Drawing.Size(100, 56);
             this.btTao.TabIndex = 2;
@@ -159,10 +160,10 @@
             this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(419, 15);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(552, 402);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(552, 300);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nội dung từ client";
@@ -171,20 +172,29 @@
             // 
             this.rtbMessage.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMessage.Location = new System.Drawing.Point(21, 23);
-            this.rtbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMessage.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMessage.Name = "rtbMessage";
-            this.rtbMessage.Size = new System.Drawing.Size(503, 360);
+            this.rtbMessage.Size = new System.Drawing.Size(503, 256);
             this.rtbMessage.TabIndex = 1;
             this.rtbMessage.Text = "";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Khaki;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1068, 553);
+            this.flowLayoutPanel1.TabIndex = 7;
             // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(974, 329);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Server";
             this.Text = "Server";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -209,6 +219,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RichTextBox rtbMessage;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

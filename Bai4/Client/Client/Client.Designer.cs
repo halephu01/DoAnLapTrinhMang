@@ -42,16 +42,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbMessage
             // 
             this.tbMessage.Enabled = false;
-            this.tbMessage.Location = new System.Drawing.Point(36, 492);
+            this.tbMessage.Location = new System.Drawing.Point(36, 442);
             this.tbMessage.Margin = new System.Windows.Forms.Padding(4);
             this.tbMessage.Name = "tbMessage";
-            this.tbMessage.Size = new System.Drawing.Size(477, 22);
+            this.tbMessage.Size = new System.Drawing.Size(520, 22);
             this.tbMessage.TabIndex = 22;
             // 
             // rtbMessage
@@ -70,12 +71,12 @@
             this.btGui.BackColor = System.Drawing.Color.Turquoise;
             this.btGui.Enabled = false;
             this.btGui.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGui.Location = new System.Drawing.Point(539, 469);
+            this.btGui.Image = global::Client.Properties.Resources.paper_plane;
+            this.btGui.Location = new System.Drawing.Point(564, 426);
             this.btGui.Margin = new System.Windows.Forms.Padding(4);
             this.btGui.Name = "btGui";
-            this.btGui.Size = new System.Drawing.Size(100, 48);
+            this.btGui.Size = new System.Drawing.Size(73, 48);
             this.btGui.TabIndex = 20;
-            this.btGui.Text = "Gửi";
             this.btGui.UseVisualStyleBackColor = false;
             this.btGui.Click += new System.EventHandler(this.btGui_Click);
             // 
@@ -95,14 +96,14 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(360, 246);
+            this.groupBox1.Size = new System.Drawing.Size(360, 258);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin kết nối";
             // 
             // tbIPClient
             // 
-            this.tbIPClient.Location = new System.Drawing.Point(181, 119);
+            this.tbIPClient.Location = new System.Drawing.Point(167, 119);
             this.tbIPClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPClient.Name = "tbIPClient";
             this.tbIPClient.Size = new System.Drawing.Size(157, 30);
@@ -111,7 +112,7 @@
             // 
             // tbPortClient
             // 
-            this.tbPortClient.Location = new System.Drawing.Point(181, 164);
+            this.tbPortClient.Location = new System.Drawing.Point(167, 157);
             this.tbPortClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortClient.Name = "tbPortClient";
             this.tbPortClient.Size = new System.Drawing.Size(157, 30);
@@ -121,7 +122,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 164);
+            this.label4.Location = new System.Drawing.Point(9, 164);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(115, 25);
@@ -131,7 +132,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 128);
+            this.label5.Location = new System.Drawing.Point(9, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 25);
@@ -141,7 +142,7 @@
             // btKetNoi
             // 
             this.btKetNoi.BackColor = System.Drawing.Color.Turquoise;
-            this.btKetNoi.Location = new System.Drawing.Point(181, 202);
+            this.btKetNoi.Location = new System.Drawing.Point(167, 202);
             this.btKetNoi.Margin = new System.Windows.Forms.Padding(4);
             this.btKetNoi.Name = "btKetNoi";
             this.btKetNoi.Size = new System.Drawing.Size(100, 44);
@@ -152,7 +153,7 @@
             // 
             // tbIPServer
             // 
-            this.tbIPServer.Location = new System.Drawing.Point(181, 34);
+            this.tbIPServer.Location = new System.Drawing.Point(167, 36);
             this.tbIPServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPServer.Name = "tbIPServer";
             this.tbIPServer.Size = new System.Drawing.Size(157, 30);
@@ -161,7 +162,7 @@
             // 
             // tbPortServer
             // 
-            this.tbPortServer.Location = new System.Drawing.Point(181, 79);
+            this.tbPortServer.Location = new System.Drawing.Point(167, 79);
             this.tbPortServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortServer.Name = "tbPortServer";
             this.tbPortServer.Size = new System.Drawing.Size(157, 30);
@@ -171,7 +172,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 79);
+            this.label3.Location = new System.Drawing.Point(9, 79);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(124, 25);
@@ -181,7 +182,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 43);
+            this.label2.Location = new System.Drawing.Point(8, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(111, 25);
@@ -195,20 +196,28 @@
             this.label1.Location = new System.Drawing.Point(31, 463);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 25);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Hãy nhập yêu cầu của bạn ";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Khaki;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1048, 488);
+            this.flowLayoutPanel1.TabIndex = 24;
             // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1045, 486);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbMessage);
             this.Controls.Add(this.rtbMessage);
             this.Controls.Add(this.btGui);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Client";
             this.Text = "Client";
@@ -235,6 +244,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

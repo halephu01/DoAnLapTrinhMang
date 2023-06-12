@@ -42,6 +42,7 @@
             this.btTao = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,17 +50,18 @@
             // tbPath
             // 
             this.tbPath.Enabled = false;
-            this.tbPath.Location = new System.Drawing.Point(469, 462);
-            this.tbPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPath.Location = new System.Drawing.Point(490, 346);
+            this.tbPath.Margin = new System.Windows.Forms.Padding(4);
             this.tbPath.Name = "tbPath";
-            this.tbPath.Size = new System.Drawing.Size(551, 22);
+            this.tbPath.Size = new System.Drawing.Size(531, 22);
             this.tbPath.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Khaki;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(464, 433);
+            this.label3.Location = new System.Drawing.Point(485, 317);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(206, 25);
@@ -71,11 +73,11 @@
             this.groupBox2.Controls.Add(this.rtbMessage);
             this.groupBox2.Enabled = false;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(469, 27);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(490, 27);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(552, 402);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(531, 286);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nội dung từ client";
@@ -84,9 +86,9 @@
             // 
             this.rtbMessage.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbMessage.Location = new System.Drawing.Point(21, 23);
-            this.rtbMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rtbMessage.Margin = new System.Windows.Forms.Padding(4);
             this.rtbMessage.Name = "rtbMessage";
-            this.rtbMessage.Size = new System.Drawing.Size(503, 360);
+            this.rtbMessage.Size = new System.Drawing.Size(503, 244);
             this.rtbMessage.TabIndex = 1;
             this.rtbMessage.Text = "";
             // 
@@ -103,9 +105,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(47, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(395, 286);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
@@ -114,7 +116,7 @@
             // tbPortServer
             // 
             this.tbPortServer.Location = new System.Drawing.Point(163, 88);
-            this.tbPortServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPortServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortServer.Name = "tbPortServer";
             this.tbPortServer.Size = new System.Drawing.Size(157, 30);
             this.tbPortServer.TabIndex = 16;
@@ -133,7 +135,7 @@
             // tbIPClient
             // 
             this.tbIPClient.Location = new System.Drawing.Point(163, 131);
-            this.tbIPClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIPClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPClient.Name = "tbIPClient";
             this.tbIPClient.Size = new System.Drawing.Size(157, 30);
             this.tbIPClient.TabIndex = 14;
@@ -152,7 +154,7 @@
             // tbPortClient
             // 
             this.tbPortClient.Location = new System.Drawing.Point(163, 178);
-            this.tbPortClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbPortClient.Margin = new System.Windows.Forms.Padding(4);
             this.tbPortClient.Name = "tbPortClient";
             this.tbPortClient.Size = new System.Drawing.Size(157, 30);
             this.tbPortClient.TabIndex = 4;
@@ -161,7 +163,7 @@
             // tbIPServer
             // 
             this.tbIPServer.Location = new System.Drawing.Point(163, 34);
-            this.tbIPServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbIPServer.Margin = new System.Windows.Forms.Padding(4);
             this.tbIPServer.Name = "tbIPServer";
             this.tbIPServer.Size = new System.Drawing.Size(164, 30);
             this.tbIPServer.TabIndex = 3;
@@ -171,7 +173,7 @@
             // 
             this.btTao.BackColor = System.Drawing.Color.Turquoise;
             this.btTao.Location = new System.Drawing.Point(141, 226);
-            this.btTao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTao.Margin = new System.Windows.Forms.Padding(4);
             this.btTao.Name = "btTao";
             this.btTao.Size = new System.Drawing.Size(100, 41);
             this.btTao.TabIndex = 2;
@@ -199,16 +201,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "IP server: ";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Khaki;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1067, 552);
+            this.panel1.TabIndex = 12;
+            // 
             // Server
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1056, 386);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Server";
             this.Text = "Server";
             this.Load += new System.EventHandler(this.Server_Load);
@@ -236,6 +247,7 @@
         private System.Windows.Forms.Button btTao;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
